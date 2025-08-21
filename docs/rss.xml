@@ -1,2 +1,55 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Eliauk</title><link>https://122334-svg.github.io/rrrrrr.github.io</link><description>just do it</description><copyright>Eliauk</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://raw.githubusercontent.com/122334-svg/rrrrrr.github.io/refs/heads/main/8gS59N8Gtg3GB7e.thumb.1000_0.jpg</url><title>avatar</title><link>https://122334-svg.github.io/rrrrrr.github.io</link></image><lastBuildDate>Thu, 21 Aug 2025 04:50:21 +0000</lastBuildDate><managingEditor>Eliauk</managingEditor><ttl>60</ttl><webMaster>Eliauk</webMaster><item><title>多靶点治疗学习心得2-药物靶点的选择</title><link>https://122334-svg.github.io/rrrrrr.github.io/post/duo-ba-dian-zhi-liao-xue-xi-xin-de-2--yao-wu-ba-dian-de-xuan-ze.html</link><description>在多靶点药物治疗中，靶点的选择、靶点的筛选标准都是至关重要的。</description><guid isPermaLink="true">https://122334-svg.github.io/rrrrrr.github.io/post/duo-ba-dian-zhi-liao-xue-xi-xin-de-2--yao-wu-ba-dian-de-xuan-ze.html</guid><pubDate>Thu, 21 Aug 2025 04:49:52 +0000</pubDate></item><item><title>多靶点治疗学习心得1</title><link>https://122334-svg.github.io/rrrrrr.github.io/post/duo-ba-dian-zhi-liao-xue-xi-xin-de-1.html</link><description>本文将浅谈适合多靶点药物治疗中我的学习心得。</description><guid isPermaLink="true">https://122334-svg.github.io/rrrrrr.github.io/post/duo-ba-dian-zhi-liao-xue-xi-xin-de-1.html</guid><pubDate>Wed, 20 Aug 2025 09:57:19 +0000</pubDate></item><item><title>hello world</title><link>https://122334-svg.github.io/rrrrrr.github.io/post/hello%20world.html</link><description>This is my first blog!。</description><guid isPermaLink="true">https://122334-svg.github.io/rrrrrr.github.io/post/hello%20world.html</guid><pubDate>Wed, 20 Aug 2025 07:07:05 +0000</pubDate></item></channel></rss>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Eliauk</title><link>https://122334-svg.github.io/rrrrrr.github.io</link><description>just do it</description><copyright>Eliauk</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://raw.githubusercontent.com/122334-svg/rrrrrr.github.io/refs/heads/main/8gS59N8Gtg3GB7e.thumb.1000_0.jpg</url><title>avatar</title><link>https://122334-svg.github.io/rrrrrr.github.io</link></image><lastBuildDate>Thu, 21 Aug 2025 05:39:10 +0000</lastBuildDate><managingEditor>Eliauk</managingEditor><ttl>60</ttl><webMaster>Eliauk</webMaster><item><title>如何将smile转成2D/3D的sdf格式文件</title><link>https://122334-svg.github.io/rrrrrr.github.io/post/ru-he-jiang-smile-zhuan-cheng-2D-3D-de-sdf-ge-shi-wen-jian.html</link><description>配置：
+python3.10+
+RDKit
+
+首先，创建一个专用的pyhton环境
+`conda create -n smile2d3d python=3.10 -y`
+`conda activate rdkitenv`
+安装必要库
+`conda install -c rdkit rdkit -y`
+`pip install flask flask-cors`
+
+
+### 代码实现
+
+首先，导入必要库
+`from flask import Flask, request, Response`
+`from rdkit import Chem`
+`from rdkit.Chem import AllChem`
+`from flask_cors import CORS`
+
+Flask, request, Response：Flask 框架的核心组件，用于创建 Web 应用、处理请求和生成响应
+rdkit.Chem, rdkit.Chem.AllChem：RDKit 库的化学信息处理模块，用于分子结构处理
+flask_cors.CORS：处理跨域资源共享（CORS），允许不同域名的前端调用该 API
+
+应用初始化
+`app = Flask(__name__)`
+`CORS(app)`
+启用CORS，解决跨域请求问题，确保前端可以从不同域名访问该服务
+
+定义API端点
+`@app.route('/sdf', methods=['POST'])`
+
+核心函数
+```
+def generate_sdf():
+    # 获取输入数据
+    data = request.get_json()
+    smiles = data.get('smiles', '')
+
+    #验证并解析 SMILES
+    #使用 RDKit 的MolFromSmiles方法将 SMILES 字符串转换为分子对象
+    mol = Chem.MolFromSmiles(smiles)
+    if not mol:
+        return Response('Invalid SMILES', status=400)
+
+    #分子结构处理
+    mol = Chem.AddHs(mol) # 加氢
+    AllChem.EmbedMolecule(mol, AllChem.ETKDG()) # 核心函数-生成分子的3D构象
+    AllChem.UFFOptimizeMolecule(mol) # 使用UFF力场优化分子结构
+
+    #生成并返回 SDF
+    sdf = Chem.MolToMolBlock(mol)
+    # 保存到服务器并生成对应路径的sdf文件
+    save_dir = '/users/ruishi/ligand'。</description><guid isPermaLink="true">https://122334-svg.github.io/rrrrrr.github.io/post/ru-he-jiang-smile-zhuan-cheng-2D-3D-de-sdf-ge-shi-wen-jian.html</guid><pubDate>Thu, 21 Aug 2025 05:38:44 +0000</pubDate></item><item><title>多靶点治疗学习心得2-药物靶点的选择</title><link>https://122334-svg.github.io/rrrrrr.github.io/post/duo-ba-dian-zhi-liao-xue-xi-xin-de-2--yao-wu-ba-dian-de-xuan-ze.html</link><description>在多靶点药物治疗中，靶点的选择、靶点的筛选标准都是至关重要的。</description><guid isPermaLink="true">https://122334-svg.github.io/rrrrrr.github.io/post/duo-ba-dian-zhi-liao-xue-xi-xin-de-2--yao-wu-ba-dian-de-xuan-ze.html</guid><pubDate>Thu, 21 Aug 2025 04:49:52 +0000</pubDate></item><item><title>多靶点治疗学习心得1</title><link>https://122334-svg.github.io/rrrrrr.github.io/post/duo-ba-dian-zhi-liao-xue-xi-xin-de-1.html</link><description>本文将浅谈适合多靶点药物治疗中我的学习心得。</description><guid isPermaLink="true">https://122334-svg.github.io/rrrrrr.github.io/post/duo-ba-dian-zhi-liao-xue-xi-xin-de-1.html</guid><pubDate>Wed, 20 Aug 2025 09:57:19 +0000</pubDate></item><item><title>hello world</title><link>https://122334-svg.github.io/rrrrrr.github.io/post/hello%20world.html</link><description>This is my first blog!。</description><guid isPermaLink="true">https://122334-svg.github.io/rrrrrr.github.io/post/hello%20world.html</guid><pubDate>Wed, 20 Aug 2025 07:07:05 +0000</pubDate></item></channel></rss>
