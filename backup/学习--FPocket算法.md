@@ -36,6 +36,8 @@ conda install fpocket
 1: flag -f :    one standard PDB or PDBx/mmcif file name. #单个文件输入
 2: flag -F :    one text file containing a simple list of pdb path #多个文件输入
 ````
+但是在这里我运行的时候出现了问题，-F 里面的文件明明没有问题但是报错 Invalid pdb name given。感谢[哈里贾布](https://github.com/harryjubb)的回答，运用parallel命令成功解决。
+` cat /users/ruishi/protein_fpocket/pdb_path.txt | parallel -j 0 fpocket -f {}`
 
 输出文件：fpocket 直接在数据文件目录中生成输出，并使用 PDB 文件名加上 _out 扩展名创建一个目录。
 ```
