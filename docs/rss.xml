@@ -1,5 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Eliauk</title><link>https://122334-svg.github.io/rrrrrr.github.io</link><description>just do it</description><copyright>Eliauk</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://raw.githubusercontent.com/122334-svg/rrrrrr.github.io/refs/heads/main/8gS59N8Gtg3GB7e.thumb.1000_0.jpg</url><title>avatar</title><link>https://122334-svg.github.io/rrrrrr.github.io</link></image><lastBuildDate>Thu, 28 Aug 2025 11:53:04 +0000</lastBuildDate><managingEditor>Eliauk</managingEditor><ttl>60</ttl><webMaster>Eliauk</webMaster><item><title>DL--new words</title><link>https://122334-svg.github.io/rrrrrr.github.io/post/DL--new%20words.html</link><description>grdient descent 梯度下降
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Eliauk</title><link>https://122334-svg.github.io/rrrrrr.github.io</link><description>just do it</description><copyright>Eliauk</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://raw.githubusercontent.com/122334-svg/rrrrrr.github.io/refs/heads/main/8gS59N8Gtg3GB7e.thumb.1000_0.jpg</url><title>avatar</title><link>https://122334-svg.github.io/rrrrrr.github.io</link></image><lastBuildDate>Fri, 29 Aug 2025 03:53:32 +0000</lastBuildDate><managingEditor>Eliauk</managingEditor><ttl>60</ttl><webMaster>Eliauk</webMaster><item><title>学习--蛋白质数据的下载</title><link>https://122334-svg.github.io/rrrrrr.github.io/post/xue-xi----dan-bai-zhi-shu-ju-de-xia-zai.html</link><description>PDB结构数据下载，参考下面公众号文章
+
+&gt;[https://mp.weixin.qq.com/s/YSvygNPzGeNbsKU5_deaLw](url)
+
+&gt; 分子对接系列------PDB数据库（选择合适的蛋白受体）
+
+课题中，我是通过bindingdb中的配体对应tsv文件中的PDBID去定位到对应蛋白质的。</description><guid isPermaLink="true">https://122334-svg.github.io/rrrrrr.github.io/post/xue-xi----dan-bai-zhi-shu-ju-de-xia-zai.html</guid><pubDate>Fri, 29 Aug 2025 03:50:52 +0000</pubDate></item><item><title>DL--new words</title><link>https://122334-svg.github.io/rrrrrr.github.io/post/DL--new%20words.html</link><description>grdient descent 梯度下降
 nerual network 神经网络
 ALGC artificial intelligence generate content 人工智能生成内容
 recap 概要描述
