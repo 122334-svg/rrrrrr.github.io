@@ -86,6 +86,14 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <div class="markdown-body" id="postBody"><p>fpocket 是一种蛋白质口袋预测算法。它允许用户根据 PDB 蛋白质结构识别有效的结合位点。该算法基于 Voronoi 网格细分，速度非常快，尤其适用于大规模蛋白质结合口袋筛选以及开发用于表征结合口袋的评分函数。现在，fpocket 还支持在 MD 轨迹上进行口袋检测，并评估结合位点的体积和成药性。最后，现在还可以使用 fpocket 和 mdpocket 计算相互作用能量。</p>
 <p>蛋白质结合口袋是配体识别的关键单元。而这些口袋不是静止不变的，而是有“动态行为”，随构象的变化而出现、扩张或消失。</p>
 <p>Fpocket是一个无监督的口袋检测算法。基于蛋白质的3D结构，通过几何和化学特征来从头预测所有可能的结合口袋，并给出每个口袋的打分。不依赖任何已知的结合信息。使用算法：基于Voronoi tessellation（沃罗诺伊剖分） 和 α球（Alpha Sphere） 方法来识别空腔与口袋。</p>
+<p>fpocket的原理：通过Alpha球扑捉蛋白质表面的凹陷区域（“口袋”），再通过聚类与评分筛选有效口袋。<br>
+概念解释：<strong>Alpha球</strong>：边界接触4个点白纸原子、内部不包含任何原子的球体。<strong>Voronoi 镶嵌</strong>：通过 Qhull 工具包（开源计算几何库）对蛋白质重原子（非氢原子）进行空间分解，生成 Voronoi 顶点 —— 而 Alpha 球的球心恰好对应 Voronoi 顶点（Voronoi 区域的交点），这是 Fpocket 高效获取 Alpha 球的基础。</p>
+<h3>算法核心</h3>
+<ol>
+<li>Alpha球检测与过滤：Voronoi顶点生成（通过Qhull工具包）--半径过滤（针对Alpha球）--分类Alpha球（极性/非极性）</li>
+<li>Alpha球聚类：粗略分割→质心聚合→精细聚类，得到完整的口袋簇</li>
+<li>口袋表征与排序：口袋表征（提取口袋的关键描述符）--口袋排序（基于偏最小二乘PLS回归构建评分函数，以 “配体覆盖率” 为目标变量，5 个核心描述符为自变量（归一化处理至 0-1 范围））</li>
+</ol>
 <p>fpocket 程序套件是一款基于 Voronoi 镶嵌的快速开源蛋白质口袋检测算法。该平台适用于希望开发新的评分函数并大规模提取口袋描述符的科研人员。<br>
 fpocket程序套件中包含：</p>
 <ol>
