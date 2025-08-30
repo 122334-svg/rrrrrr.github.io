@@ -20,6 +20,13 @@ PointNet++在PointNet基础上引入分层采样与局部特征聚合。专门�
 3. 局部特征提取（PointNet Layer）：对每个局部点云用 PointNet 提取局部特征（类似 “看细节”）。
 4. 特征传播（Feature Propagation）：将高层的局部特征与全局特征融合，逐步传递到原始点云的每个点（用于分割任务）
 
+做分类任务的PointNet++
+
+<img width="1146" height="436" alt="Image" src="https://github.com/user-attachments/assets/68cb044b-c018-401f-8168-73841d84383c" />
+做分割任务的PointNet++
+
+<img width="847" height="424" alt="Image" src="https://github.com/user-attachments/assets/c24f8d15-cd8b-41df-bf75-40f74f272333" />
+
 --补充：鲁棒性--
 鲁棒性：（抗干扰能力）系统或模型在面对干扰、噪声或异常情况时，仍能保持稳定性能或正确输出的能力
 
