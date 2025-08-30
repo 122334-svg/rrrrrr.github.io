@@ -1,4 +1,4 @@
-EGNN（E(n)-Equivariant Graph Neural Network）是一种保持欧几里得变换（平移、旋转、反射）等变的图神经网络，通过几何感知的消息传递处理动态或3D图结构数据。
+EGNN（E(n)-Equivariant Graph Neural Network）是一种保持欧几里得变换（平移、旋转、反射）等变的图神经网络，通过几何感知的消息传递处理动态或3D图结构数据。（EGNN最重要的思想就是几何等变）
 
 EGNN处理的数据类型：“节点“和”边“
 
