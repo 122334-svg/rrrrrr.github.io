@@ -10,9 +10,15 @@
         let theme = localStorage.getItem("meek_theme") || "light";
         document.documentElement.setAttribute("data-color-mode", theme);
     </script>
-<meta name="description" content="1 为什么选择BingdingDB数据库，而非其他数据库？。">
+<meta name="description" content="1 为什么选择BingdingDB数据库，而非其他数据库？
+
+2 我的代码逻辑是建立一个Data对象（作为模型的输），包含一个配体的所有信息（见模型框架PPT），我从tsv文件找到配体对应的ic50值，但是我的tsv文档中的配体如何跟sdf文档中的配体对应上？如何确保一个配体正确匹配上它的亲和力值（IC50）？
+solution：运用check_sdf代码检查了sdf文件中的分子标识符，发现sdf中“BindingDB MonomerID”能和tsv文档中的BindingDB MonomerID列一一对应，所以，一个配体能对应上它对应的亲和力数值。">
 <meta property="og:title" content="关于课题的思考点（持续更新）">
-<meta property="og:description" content="1 为什么选择BingdingDB数据库，而非其他数据库？。">
+<meta property="og:description" content="1 为什么选择BingdingDB数据库，而非其他数据库？
+
+2 我的代码逻辑是建立一个Data对象（作为模型的输），包含一个配体的所有信息（见模型框架PPT），我从tsv文件找到配体对应的ic50值，但是我的tsv文档中的配体如何跟sdf文档中的配体对应上？如何确保一个配体正确匹配上它的亲和力值（IC50）？
+solution：运用check_sdf代码检查了sdf文件中的分子标识符，发现sdf中“BindingDB MonomerID”能和tsv文档中的BindingDB MonomerID列一一对应，所以，一个配体能对应上它对应的亲和力数值。">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://122334-svg.github.io/rrrrrr.github.io/post/guan-yu-ke-ti-de-si-kao-dian-%EF%BC%88-chi-xu-geng-xin-%EF%BC%89.html">
 <meta property="og:image" content="https://raw.githubusercontent.com/122334-svg/rrrrrr.github.io/refs/heads/main/8gS59N8Gtg3GB7e.thumb.1000_0.jpg">
@@ -73,7 +79,10 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody"><p>1 为什么选择BingdingDB数据库，而非其他数据库？</p></div>
+<div class="markdown-body" id="postBody"><p>1 为什么选择BingdingDB数据库，而非其他数据库？</p>
+<p>2 我的代码逻辑是建立一个Data对象（作为模型的输），包含一个配体的所有信息（见模型框架PPT），我从tsv文件找到配体对应的ic50值，但是我的tsv文档中的配体如何跟sdf文档中的配体对应上？如何确保一个配体正确匹配上它的亲和力值（IC50）？<br>
+solution：运用check_sdf代码检查了sdf文件中的分子标识符，发现sdf中“BindingDB MonomerID”能和tsv文档中的BindingDB MonomerID列一一对应，所以，一个配体能对应上它对应的亲和力数值。</p>
+<p><a target="_blank" rel="noopener noreferrer" href="https://github.com/user-attachments/assets/4c191363-037b-462c-a165-f9168d16cb90"><img width="720" height="529" alt="Image" src="https://github.com/user-attachments/assets/4c191363-037b-462c-a165-f9168d16cb90" style="max-width: 100%; height: auto; max-height: 529px;"></a></p></div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
