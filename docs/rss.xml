@@ -1,17 +1,17 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Eliauk</title><link>https://122334-svg.github.io/rrrrrr.github.io</link><description>just do it</description><copyright>Eliauk</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://raw.githubusercontent.com/122334-svg/rrrrrr.github.io/refs/heads/main/8gS59N8Gtg3GB7e.thumb.1000_0.jpg</url><title>avatar</title><link>https://122334-svg.github.io/rrrrrr.github.io</link></image><lastBuildDate>Thu, 04 Sep 2025 08:16:43 +0000</lastBuildDate><managingEditor>Eliauk</managingEditor><ttl>60</ttl><webMaster>Eliauk</webMaster><item><title>模型图解</title><link>https://122334-svg.github.io/rrrrrr.github.io/post/mo-xing-tu-jie.html</link><description>具体的图在本地文件夹Desktop/Multi-target_drugs/\ depression/TPH2_HTR2A/figs 
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Eliauk</title><link>https://122334-svg.github.io/rrrrrr.github.io</link><description>just do it</description><copyright>Eliauk</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://raw.githubusercontent.com/122334-svg/rrrrrr.github.io/refs/heads/main/8gS59N8Gtg3GB7e.thumb.1000_0.jpg</url><title>avatar</title><link>https://122334-svg.github.io/rrrrrr.github.io</link></image><lastBuildDate>Thu, 04 Sep 2025 11:10:40 +0000</lastBuildDate><managingEditor>Eliauk</managingEditor><ttl>60</ttl><webMaster>Eliauk</webMaster><item><title>模型图解</title><link>https://122334-svg.github.io/rrrrrr.github.io/post/mo-xing-tu-jie.html</link><description>具体的图在本地文件夹Desktop/Multi-target_drugs/\ depression/TPH2_HTR2A/figs 
 
 重点介绍跑出来的几个图
 
 1. Learning Curves
 图中两条线：一条train_loss 另一条val_loss 
 横坐标：epoch
-纵坐标：MSE（pIC50）【MSE就是均方误差】
+纵坐标：MSE（pIC50）MSE就是均方误差
 从图中可以看出过拟合现象：如果train_loss持续下降而val_loss变化不大，说明训练开始出现过拟合（训练继续变好，验证不再改善）
 
 2. Pred vs True（per-pocket）
 指标：RMSE=0.569、MAE=0.442、Pearson r=0.583、Spearman ρ=0.552
-【
+
 RMSE：均方根误差。</description><guid isPermaLink="true">https://122334-svg.github.io/rrrrrr.github.io/post/mo-xing-tu-jie.html</guid><pubDate>Thu, 04 Sep 2025 08:16:17 +0000</pubDate></item><item><title>安装gpu驱动-CUDA Toolkits</title><link>https://122334-svg.github.io/rrrrrr.github.io/post/an-zhuang-gpu-qu-dong--CUDA%20Toolkits.html</link><description>&gt; [https://developer.nvidia.com/cuda-12-8-0-download-archive?target_os=Linux&amp;target_arch=x86_64&amp;Distribution=Ubuntu&amp;target_version=22.04&amp;target_type=runfile_local](url) 
 
 在英伟达官网选择服务器是配版本的CUDA Toolkits，这里选择wegt命令无需root权限
