@@ -93,7 +93,15 @@ robustness 鲁棒性</strong><br>
 <strong>global feature vector 全局特征向量</strong><br>
 对整个样本的整体属性进行编码后的低维数值向量（全部降维），用于表示样本的全局特征。<br>
 <strong>Dimensionality reduction 降维</strong><br>
-比较常用的降维方法：PCA、t-SNE等 本质保留数据关键信息的前提下，减少特征维度。</p></div>
+比较常用的降维方法：PCA、t-SNE等 本质保留数据关键信息的前提下，减少特征维度。<br>
+<strong>ReLU：激活函数</strong><br>
+作用：引入非线性，计算简单高效<br>
+<strong>BN：批归一化</strong><br>
+作用：标准化（均值0，方差1）、再缩放（因为标准化有会抹杀特性，所以BN还允许分队有自己的特点，通过缩放get）<br>
+<strong>pad：填充</strong><br>
+作用：让所有样本在同一维度有相同的尺寸<br>
+<strong>stack：堆叠</strong><br>
+作用：将多个意见填充好的、形状完全一致的样本，组合成一个更大的批量张量（batch tensor），形成模型一个batch所需的批量输入张量。所以stack的输出是批量张量（第一个维度是batch_sized d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d）</p></div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
