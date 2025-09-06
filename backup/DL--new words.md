@@ -24,7 +24,9 @@ robustness 鲁棒性**
 **pad：填充**
 作用：让所有样本在同一维度有相同的尺寸
 **stack：堆叠**
-作用：将多个意见填充好的、形状完全一致的样本，组合成一个更大的批量张量（batch tensor），形成模型一个batch所需的批量输入张量。所以stack的输出是批量张量（第一个维度是batch_sized d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d）
+作用：将多个意见填充好的、形状完全一致的样本，组合成一个更大的批量张量（batch tensor），形成模型一个batch所需的批量输入张量。所以stack的输出是批量张量（第一个维度是batch_sized）
+**tensor:张量**
+作用：张量（torch.tensor）和 NumPy 数组（numpy.ndarray）都是多维数组，但是张量可以无缝迁移到GPU上计算，而NumPy仅支持CPU。
 
 
 
