@@ -83,7 +83,10 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody"><p>EGNN（E(n)-Equivariant Graph Neural Network）是一种保持欧几里得变换（平移、旋转、反射）等变的图神经网络，通过几何感知的消息传递处理动态或3D图结构数据。（EGNN最重要的思想就是几何等变）</p>
+<div class="markdown-body" id="postBody"><p>EGNN（E(n)-Equivariant Graph Neural Network）是一种保持欧几里得变换（平移、旋转、反射）等变的图神经网络，通过几何感知的消息传递处理动态或3D图结构数据。（EGNN最重要的思想就是几何等变）。</p>
+<p>EGNN网络的工作原理可以用通俗易懂的例子描述：首先EGNN网络它处理的是图结构，这些数据的特点（以药物配体为例）：节点之间有联系（边），但没有固定的顺序，且节点位置可能在空间中变换（比如分子旋转）。<br>
+EGNN的工作过程是每个节点回西安关注自己邻居的状态，收集邻居的“信息”（比如原子类型、坐标、电荷等特征信息），然后，节点会根据邻居的信息更新自己的“状态”（让自己的特征变得更加综合，包含邻居的影响）。那么，EGNN最特别的地方就是“等变”，他所有的特征都会随着空间变换自动动。</p>
+<p>在EGNN中，（在github中分为egnn_pytorch和egnn_pytorch_geometric，其中的egnn_pytorch是按照我这个思路的），输入的数据是一张大图（一个batch一个图，batch_size表明了一个batch有多少个样本），这个大图中包含了很多小图，每个小图就是一个样本。小图和小图之间是通过先将独立的小图进行填充（使得小图和小图之间的张量对齐），然后创建掩码，再堆叠成批（变成一个列表中的多个元素）。</p>
 <p>EGNN处理的数据类型：“节点“和”边“</p>
 <h3>代码实现</h3>
 <p>先准备环境<br>
